@@ -110,7 +110,12 @@
                           if (Math.ceil(days_difference) > 0)  {
                             document.getElementById('renewal').innerHTML = Math.ceil(days_difference)-1 + ' day(s) until token renewal';
                           }
-                            else {
+                          else if (date1 == date ) {
+                            document.getElementById('renewal').innerHTML = 'Today'
+                            document.getElementById('renewal').style.color = 'red'
+                          }
+
+                          else {
                             document.getElementById('renewal').innerHTML = 'Token expired' + Math.ceil(days_difference)-1 +  ' day(s) ago'
                             document.getElementById('renewal').style.color = 'red'
                           }
