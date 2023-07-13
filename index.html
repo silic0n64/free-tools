@@ -108,10 +108,10 @@
 
                           //calculate days difference by dividing total milliseconds in a day
                           if (Math.ceil(days_difference) > 0)  {
-                            document.getElementById('renewal').innerHTML = Math.ceil(days_difference) + ' day(s) until token renewal';
+                            document.getElementById('renewal').innerHTML = Math.ceil(days_difference)-1 + ' day(s) until token renewal';
                           }
                             else {
-                            document.getElementById('renewal').innerHTML = 'Token expired' + Math.ceil(days_difference) +  ' day(s) ago'
+                            document.getElementById('renewal').innerHTML = 'Token expired' + Math.ceil(days_difference)-1 +  ' day(s) ago'
                             document.getElementById('renewal').style.color = 'red'
                           }
 
